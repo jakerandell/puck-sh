@@ -1,0 +1,130 @@
+@font-face {
+	font-family: Chicago;
+	src: url('https://dl.dropbox.com/s/ueoh9twyvz4bwkr/ChicagoFLF.ttf?dl=0');
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.mos9 {
+	background-color: #62909b;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Chicago, sans-serif;
+	font-size: 15px;
+
+	.window {
+		display: flex;
+		flex-direction: column;
+		background-color: #cecece;
+		border: solid 1px #000000;
+		box-shadow: 2px 2px 0 #000000;
+		min-width: 300px;
+		min-height: 200px;
+		border: {
+			top: solid 1px #ffffff;
+			left: solid 1px #ffffff;
+			right: solid 1px #B5B5B5;
+			bottom: solid 1px #B5B5B5;
+		}
+
+		.window__header {
+			display: flex;
+			justify-content: space-between;
+
+			.window__title {
+				flex: 1;
+				display: flex;
+				padding: 2px;
+
+				&:before, &:after {
+					background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAAGUlEQVQYV2P8////fwY0wFhcXIwpOERUAgBPkx+vDNl9TQAAAABJRU5ErkJggg==');
+					content: '';
+					flex: 1;
+				}
+
+				&:before { margin-right: 10px; }
+				&:after { margin-left: 10px; }
+			}
+
+			.window__tools {
+				display: flex;
+				padding: 2px;
+
+				.window__tool--1,
+				.window__tool--2 {
+					&:after {
+						content: '';
+						display: block;
+						border-bottom: solid 1px #000000;
+					}
+				}
+
+				.window__tool--1 {
+					&:after {
+						width: 5px;
+						height: 5px;
+						border-right: solid 1px #000000;
+					}
+				}
+
+				.window__tool--2 {
+					&:after {
+						width: 100%;
+						height: 1px;
+						margin-top: 3px;
+						border-top: solid 1px #000000;
+					}
+				}
+			}
+		}
+
+		.window__content {
+			display: flex;
+			flex: 1;
+			margin: 0 2px 2px;
+			padding: 10px;
+			background-color: #ffffff;
+			box-shadow: inset 0 0 1px 1px #000000;
+			border: {
+				top: solid 1px #B5B5B5;
+				left: solid 1px #B5B5B5;
+				right: solid 1px #ffffff;
+				bottom: solid 1px #ffffff;
+			}
+
+			a {
+				text-decoration: none;
+				color: black;
+				display: block;
+				width: 100%;
+
+				img, span {
+					vertical-align: middle;
+				}
+
+				img {
+					width: 16px;
+					margin-right: 0.2em;
+				}
+			}
+		}
+	}
+
+	.button {
+		display: block;
+		width: 10px;
+		height: 10px;
+		margin: 2px;
+		border: solid 1px #000000;
+		box-shadow: inset 1px 1px #cecece, inset -1px -1px #8c8c8c, 1px 1px #ffffff, -1px -1px #8c8c8c;
+		background-color: rgba(156,156,156,1);
+		background: linear-gradient(135deg, rgba(156,156,156,1) 0%, rgba(173,173,173,1) 25%, rgba(206,206,206,1) 50%, rgba(222,222,222,1) 75%, rgba(255,255,255,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c9c9c', endColorstr='#ffffff', GradientType=1 );
+	}
+}
