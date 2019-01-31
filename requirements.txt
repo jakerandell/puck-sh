@@ -1,7 +1,7 @@
-Flask
-Flask-RESTful
+flask
+flask-restful
 gunicorn
+jinja2
 itsdangerous
-Jinja2
 peewee
-Werkzeug
+werkzeug
